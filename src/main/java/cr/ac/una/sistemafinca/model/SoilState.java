@@ -10,8 +10,8 @@ package cr.ac.una.sistemafinca.model;
  */
 public enum SoilState {
     DISPONIBLE("DISPONIBLE"),
-    ENPRODUCCION("EN PRODUCCION"),
-    ENDESCANSO("EN DESCANSO");
+    EN_PRODUCCION("EN_PRODUCCION"),
+    EN_DESCANSO("EN_DESCANSO");
     
     private final String soilState;
     

@@ -47,7 +47,7 @@ public class PlotDAO implements PlotInterface{
 
     @Override
     public boolean updatePlot(Plot plot) {
-        String sql = "UPDATE PLOTS SET plot_name = ?, plot_lacation = ?,plot_area = ?, soil_type = ?,soil_state = ? WHERE code = ?";
+        String sql = "UPDATE PLOTS SET plot_name = ?, plot_location = ?,plot_area = ?, soil_type = ?,soil_state = ? WHERE code = ?";
         try{
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, plot.getPlotName());

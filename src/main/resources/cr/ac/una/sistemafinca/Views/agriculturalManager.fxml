@@ -12,9 +12,9 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="plotButton" layoutX="313.0" layoutY="99.0" mnemonicParsing="false" onAction="#switchToPlotController" prefHeight="26.0" prefWidth="102.0" text="Agregar Parcela" />
-      <Button fx:id="cropButton" layoutX="313.0" layoutY="152.0" mnemonicParsing="false" onAction="#switchToCropController" prefHeight="26.0" prefWidth="102.0" text="Agregar Cultivo" />
-      <Button fx:id="responsibleController" layoutX="294.0" layoutY="202.0" mnemonicParsing="false" onAction="#switchToResponsibleController" prefHeight="26.0" prefWidth="140.0" text="Agregar Responsable" />
-      <Button fx:id="workButton" layoutX="318.0" layoutY="250.0" mnemonicParsing="false" onAction="#switchToWorksWindow" text="Agregar Labor" />
+      <Button fx:id="plotButton" layoutX="271.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchToPlotController" prefHeight="26.0" prefWidth="224.0" text="Agregar Parcela" />
+      <Button fx:id="cropButton" layoutX="271.0" layoutY="152.0" mnemonicParsing="false" onAction="#switchToCropController" prefHeight="26.0" prefWidth="224.0" text="Agregar Cultivo" />
+      <Button fx:id="responsibleController" layoutX="273.0" layoutY="202.0" mnemonicParsing="false" onAction="#switchToResponsibleController" prefHeight="26.0" prefWidth="224.0" text="Agregar Responsable" />
+      <Button fx:id="workButton" layoutX="272.0" layoutY="250.0" mnemonicParsing="false" onAction="#switchToWorksWindow" prefHeight="26.0" prefWidth="224.0" text="Agregar Labor" />
    </children>
 </AnchorPane>
