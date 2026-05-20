@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.sistemafinca.controller.ResponsibleController">
+   <children>
+      <Label layoutX="26.0" layoutY="38.0" text="ID de responsable" />
+      <Label layoutX="27.0" layoutY="79.0" text="Nombre de responsable" />
+      <Label layoutX="27.0" layoutY="125.0" text="Coreo electrónico" />
+      <Label layoutX="28.0" layoutY="165.0" text="Número telefónico" />
+      <Label layoutX="24.0" layoutY="203.0" text="Tipo de responsable" />
+      <Label layoutX="26.0" layoutY="243.0" text="Asociación " />
+      <ComboBox fx:id="specialtyBox" layoutX="24.0" layoutY="286.0" prefWidth="150.0" promptText="Especialidad técnica" />
+      <TextField fx:id="idField" layoutX="216.0" layoutY="34.0" prefHeight="26.0" prefWidth="231.0" promptText="600000000" />
+      <TextField fx:id="nameResField" layoutX="216.0" layoutY="74.0" prefHeight="26.0" prefWidth="231.0" promptText="Juan Abarca" />
+      <TextField fx:id="emailField" layoutX="216.0" layoutY="121.0" prefHeight="26.0" prefWidth="231.0" promptText="juan@gmail.com" />
+      <TextField fx:id="numberField" layoutX="216.0" layoutY="161.0" prefHeight="26.0" prefWidth="231.0" promptText="8070 9070" />
+      <TextField fx:id="typeResField" layoutX="216.0" layoutY="199.0" prefHeight="26.0" prefWidth="231.0" promptText="Producto/Técnico agrícola" />
+      <TextField fx:id="asociationField" layoutX="216.0" layoutY="238.0" prefHeight="26.0" prefWidth="231.0" promptText="Finca la bonita" />
+      <Button fx:id="responsibleButton" layoutX="216.0" layoutY="286.0" mnemonicParsing="false" onAction="#addResponsible" text="Agregar responsable" />
+      <Label layoutX="481.0" layoutY="38.0" text="ID de productor" />
+      <Label layoutX="481.0" layoutY="78.0" text="Nombre del productor" />
+      <TextField fx:id="producerField" layoutX="611.0" layoutY="35.0" prefHeight="26.0" prefWidth="207.0" promptText="FINC-001" />
+      <TextField fx:id="producerNameField" layoutX="611.0" layoutY="75.0" prefHeight="26.0" prefWidth="207.0" promptText="Asociación Finca bonita" />
+      <Button fx:id="producerbutton" layoutX="611.0" layoutY="130.0" mnemonicParsing="false" onAction="#addProducer" text="Agregar productor" />
+      <Button fx:id="viewButton" layoutX="376.0" layoutY="286.0" mnemonicParsing="false" onAction="#swichtToViewResponsibles" text="Ver responsables y productores" />
+      <Button fx:id="backButton" layoutX="749.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Regresar" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="1021.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.sistemafinca.controller.WorkController">
+   <children>
+      <Label layoutX="42.0" layoutY="48.0" text="Código de labor" />
+      <Label layoutX="42.0" layoutY="84.0" text="Código de parcela" />
+      <Label layoutX="42.0" layoutY="116.0" text="Código de cultivo" />
+      <Label layoutX="42.0" layoutY="152.0" text="ID de responsable" />
+      <Label layoutX="42.0" layoutY="192.0" text="Fecha" />
+      <Label layoutX="42.0" layoutY="231.0" text="Tipo de labor" />
+      <Label layoutX="42.0" layoutY="271.0" text="Descripción" />
+      <Label layoutX="42.0" layoutY="311.0" text="Costo estimado" />
+      <TextField fx:id="workCodeField" layoutX="197.0" layoutY="44.0" prefHeight="26.0" prefWidth="186.0" promptText="CL-001" />
+      <TextField fx:id="plotCodeField" layoutX="197.0" layoutY="79.0" prefHeight="26.0" prefWidth="186.0" promptText="CP-001" />
+      <TextField fx:id="cropCodeField" layoutX="197.0" layoutY="111.0" prefHeight="26.0" prefWidth="186.0" promptText="CT-001" />
+      <TextField fx:id="resIdField" layoutX="197.0" layoutY="147.0" prefHeight="26.0" prefWidth="186.0" promptText="60000000" />
+      <TextField fx:id="dateField" layoutX="197.0" layoutY="187.0" prefHeight="26.0" prefWidth="186.0" promptText="26/05/2026" />
+      <TextField fx:id="typeField" layoutX="197.0" layoutY="226.0" prefHeight="26.0" prefWidth="186.0" promptText="Limpieza" />
+      <TextField fx:id="descriptionField" layoutX="197.0" layoutY="266.0" prefHeight="26.0" prefWidth="186.0" promptText="Se hizo limpieza en" />
+      <TextField fx:id="costField" layoutX="197.0" layoutY="306.0" prefHeight="26.0" prefWidth="186.0" promptText="2500" />
+      <TableView fx:id="worksList" layoutX="59.0" layoutY="388.0" prefHeight="200.0" prefWidth="919.0">
+        <columns>
+          <TableColumn fx:id="workCodeColumn" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="plotCodeColumn" prefWidth="104.80001831054688" text="Código parcela" />
+            <TableColumn fx:id="cropCodeColumn" prefWidth="104.80001831054688" text="Código cultivo" />
+            <TableColumn fx:id="responsibleColumn" prefWidth="104.80001831054688" text="ID Responsable" />
+            <TableColumn fx:id="dateColumn" prefWidth="104.80001831054688" text="Fecha" />
+            <TableColumn fx:id="typeColumn" prefWidth="104.80001831054688" text="Tipo de labor" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="207.20001220703125" text="Descripción" />
+            <TableColumn fx:id="costColumn" prefWidth="104.80001831054688" text="Costo Estimado" />
+        </columns>
+      </TableView>
+      <Button fx:id="addButton" layoutX="421.0" layoutY="44.0" mnemonicParsing="false" onAction="#addWorks" text="Agregar labor" />
+      <Button fx:id="updateWork" layoutX="421.0" layoutY="80.0" mnemonicParsing="false" onAction="#updateWorks" text="Actualizar labor" />
+      <Button fx:id="deleteButton" layoutX="906.0" layoutY="44.0" mnemonicParsing="false" onAction="#deleteWorks" text="Eliminar labor" />
+      <Button fx:id="findButton" layoutX="909.0" layoutY="79.0" mnemonicParsing="false" onAction="#findWorks" text="Buscar labor" />
+      <TextField fx:id="idField" layoutX="685.0" layoutY="44.0" prefHeight="26.0" prefWidth="186.0" promptText="CL-001" />
+      <Label layoutX="578.0" layoutY="48.0" text="Código de labor" />
+      <Label layoutX="511.0" layoutY="358.0" text="Lista de labores" />
+      <Button fx:id="showButton" layoutX="63.0" layoutY="600.0" mnemonicParsing="false" onAction="#showWorks" text="Mostrar labores" />
+      <Button fx:id="backButton" layoutX="944.0" layoutY="666.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Regresar" />
+   </children>
+</AnchorPane>

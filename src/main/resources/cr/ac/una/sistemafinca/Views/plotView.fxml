@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.sistemafinca.controller.PlotViewController">
+   <children>
+      <TableView fx:id="plotsList" layoutX="26.0" layoutY="58.0" prefHeight="319.0" prefWidth="687.0">
+        <columns>
+          <TableColumn fx:id="codeColumn" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="nameColumn" prefWidth="140.79998779296875" text="Nombre" />
+            <TableColumn fx:id="locationColumn" prefWidth="142.40003967285156" text="Ubicación" />
+            <TableColumn fx:id="areaColumn" prefWidth="95.20001220703125" text="Área en m²" />
+            <TableColumn fx:id="soilColum" prefWidth="100.79998779296875" text="Tipo de suelo" />
+            <TableColumn fx:id="stateColumn" minWidth="0.0" prefWidth="133.60003662109375" text="Estado del suelo" />
+        </columns>
+      </TableView>
+      <Button fx:id="showButton" layoutX="737.0" layoutY="58.0" mnemonicParsing="false" onAction="#showPlots" text="Mostrar parcelas" />
+      <Button fx:id="findbutton" layoutX="737.0" layoutY="108.0" mnemonicParsing="false" onAction="#showPlotById" prefHeight="26.0" prefWidth="103.0" text="Buscar parcela" />
+      <Button fx:id="deleteButton" layoutX="737.0" layoutY="159.0" mnemonicParsing="false" onAction="#deletePlots" text="Eliminar parcela" />
+      <Label layoutX="333.0" layoutY="20.0" text="Lista de parcelas" />
+      <TextField fx:id="newCode" layoutX="147.0" layoutY="404.0" prefHeight="26.0" prefWidth="185.0" />
+      <TextField fx:id="newName" layoutX="147.0" layoutY="447.0" prefHeight="26.0" prefWidth="185.0" />
+      <TextField fx:id="newLocation" layoutX="147.0" layoutY="495.0" prefHeight="26.0" prefWidth="185.0" />
+      <TextField fx:id="newArea" layoutX="147.0" layoutY="537.0" prefHeight="26.0" prefWidth="185.0" />
+      <TextField fx:id="newSoilType" layoutX="147.0" layoutY="580.0" prefHeight="26.0" prefWidth="185.0" />
+      <Button fx:id="updateButton" layoutX="365.0" layoutY="457.0" mnemonicParsing="false" onAction="#updatePlots" text="Actualizar parcela" />
+      <Label layoutX="26.0" layoutY="409.0" text="Nuevo código" />
+      <Label layoutX="26.0" layoutY="452.0" text="Nuevo nombre" />
+      <Label layoutX="24.0" layoutY="500.0" text="Nuevo ubicación" />
+      <Label layoutX="22.0" layoutY="542.0" text="Nueva Aŕea" />
+      <Label layoutX="22.0" layoutY="584.0" text="Nuevo tipo de suelo" />
+      <ComboBox fx:id="newStateCombo" layoutX="362.0" layoutY="404.0" prefWidth="150.0" promptText="Nuevo Estado de suelo" />
+      <Button fx:id="backButton" layoutX="22.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchToPlot" text="Regresar" />
+   </children>
+</AnchorPane>

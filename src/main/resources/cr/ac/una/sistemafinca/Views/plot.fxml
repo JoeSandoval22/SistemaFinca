@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.sistemafinca.controller.PlotController">
+   <children>
+      <Label layoutX="44.0" layoutY="58.0" text="Código de parcela" />
+      <Label layoutX="44.0" layoutY="95.0" text="Nombre de parcela" />
+      <Label layoutX="44.0" layoutY="132.0" text="Ubicación" />
+      <Label layoutX="44.0" layoutY="173.0" text="Área en m²" />
+      <Label layoutX="44.0" layoutY="219.0" text="Tipo de suelo" />
+      <ComboBox fx:id="soilStateBox" layoutX="44.0" layoutY="254.0" prefWidth="150.0" />
+      <TextField fx:id="codeField" layoutX="187.0" layoutY="54.0" prefHeight="26.0" prefWidth="240.0" promptText="PAR-001" />
+      <TextField fx:id="plotField" layoutX="188.0" layoutY="91.0" prefHeight="26.0" prefWidth="240.0" promptText="La Guaria" />
+      <TextField fx:id="locationField" layoutX="187.0" layoutY="127.0" prefHeight="26.0" prefWidth="240.0" promptText="Ciudad Neyli" />
+      <TextField fx:id="soilField" layoutX="187.0" layoutY="214.0" prefHeight="26.0" prefWidth="240.0" promptText="Suelo arcilloso" />
+      <TextField fx:id="areaField" layoutX="187.0" layoutY="168.0" prefHeight="26.0" prefWidth="240.0" promptText="1000 m²" />
+      <Button fx:id="plotButton" layoutX="373.0" layoutY="280.0" mnemonicParsing="false" onAction="#addPlot" text="Agregar parcela" />
+      <Button fx:id="backButton" layoutX="537.0" layoutY="46.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Regresar" />
+      <Button fx:id="viewButton" layoutX="537.0" layoutY="83.0" mnemonicParsing="false" onAction="#switchToPlotView" text="Ver parcelas" />
+   </children>
+</AnchorPane>

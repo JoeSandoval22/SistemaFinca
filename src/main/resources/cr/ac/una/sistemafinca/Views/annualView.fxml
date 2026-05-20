@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.sistemafinca.controller.AnnualController">
+   <children>
+      <Label layoutX="36.0" layoutY="85.0" text="Código de cultivo" />
+      <Label layoutX="36.0" layoutY="181.0" text="Ciclo de días " />
+      <Label layoutX="36.0" layoutY="136.0" text="Nombre de cultivo" />
+      <Label layoutX="135.0" layoutY="43.0" text="Agregar cultivos anuales" />
+      <TextField fx:id="idField" layoutX="159.0" layoutY="81.0" prefHeight="26.0" prefWidth="196.0" promptText="CA-001" />
+      <TextField fx:id="nameField" layoutX="159.0" layoutY="131.0" prefHeight="26.0" prefWidth="196.0" promptText="Maíz" />
+      <TextField fx:id="daysField" layoutX="159.0" layoutY="176.0" prefHeight="26.0" prefWidth="196.0" promptText="60" />
+      <TableView fx:id="annualCropsList" layoutX="31.0" layoutY="288.0" prefHeight="298.0" prefWidth="870.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="100.80001831054688" text="Código" />
+          <TableColumn fx:id="nameColumn" prefWidth="107.19998168945312" text="Nombre" />
+            <TableColumn fx:id="varietyColumn" prefWidth="107.19998168945312" text="Variedad" />
+            <TableColumn fx:id="dateColumn" prefWidth="127.20001220703125" text="Fecha de plantación" />
+            <TableColumn fx:id="typeColumn" prefWidth="102.4000244140625" text="Tipo de cultivo" />
+            <TableColumn fx:id="daysColumn" prefWidth="92.79998779296875" text="Ciclo de días" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="228.79998779296875" text="Descripción" />
+        </columns>
+      </TableView>
+      <Button fx:id="addButton" layoutX="404.0" layoutY="81.0" mnemonicParsing="false" onAction="#addAnnualCrop" text="Agregar cultivo" />
+      <Button fx:id="deleteButton" layoutX="404.0" layoutY="177.0" mnemonicParsing="false" onAction="#deleteCrops" text="Eliminar cultivo" />
+      <Button fx:id="updateButton" layoutX="400.0" layoutY="131.0" mnemonicParsing="false" onAction="#updateCrops" text="Actualizar cultivo" />
+      <Button fx:id="showButton" layoutX="912.0" layoutY="288.0" mnemonicParsing="false" onAction="#showAnnualCrops" text="Mostrar cultivos" />
+      <Button fx:id="findButton" layoutX="404.0" layoutY="218.0" mnemonicParsing="false" onAction="#findAnnualCrop" text="Buscar cultivo" />
+      <Button fx:id="backButton" layoutX="950.0" layoutY="560.0" mnemonicParsing="false" onAction="#swichtToCropsWindow" text="Regresar" />
+   </children>
+</AnchorPane>

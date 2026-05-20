@@ -1,0 +1,98 @@
+/* Raíz con el nuevo fondo verde tenue para toda la aplicación */
+.root {
+    -fx-background-color: #f0f7f4;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* Estilo para las etiquetas de texto */
+.label {
+    -fx-text-fill: #2c3e2f;
+}
+
+/* Títulos principales */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1b4332;
+}
+
+/* Botones del Menú Principal y Navegación */
+.button {
+    -fx-background-color: #40916c;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2d6a4f;
+}
+
+.button:pressed {
+    -fx-background-color: #1b4332;
+}
+
+/* Campos de texto / Inputs */
+.text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 4px;
+    -fx-border-color: #d8e2dc;
+    -fx-border-radius: 4px;
+    -fx-padding: 6px;
+    -fx-text-fill: #2d3748;
+}
+
+.text-field:focused {
+    -fx-border-color: #52b788;
+    -fx-background-color: #ffffff;
+}
+
+/* Estilos para la Tabla de Cultivos (TableView) */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #c2d5cb;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 0;
+}
+
+/* Encabezados de la tabla */
+.table-view .column-header-background {
+    -fx-background-color: #2d6a4f;
+    -fx-background-radius: 6px 6px 0 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 40px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Filas de la tabla */
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #eef3f0 transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f7faf8;
+}
+
+.table-row-cell:filled:hover {
+    -fx-background-color: #e2f0e7;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: #b7e4c7;
+}
+
+.table-row-cell:filled:selected .label {
+    -fx-text-fill: #1b4332;
+}
