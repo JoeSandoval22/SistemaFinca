@@ -98,7 +98,7 @@ public class PerennialCropDAO implements PerennialCropInterface {
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
                 PerennialCrop perennial = new PerennialCrop(rs.getString("perennial_code"),rs.getString("perennial_name"),rs.getString("crop_variety"),
-                                                            rs.getString("plantation_date"),rs.getString("crop_type"),rs.getInt("years_production"));
+                                                            rs.getString("planting_date"),rs.getString("crop_type"),rs.getInt("years_production"));
                 perennials.add(perennial);
             }
         } catch(SQLException ex){
@@ -118,7 +118,7 @@ public class PerennialCropDAO implements PerennialCropInterface {
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
                 return new PerennialCrop(rs.getString("perennial_code"),rs.getString("perennial_name"),rs.getString("crop_variety"),
-                                         rs.getString("plantation_date"),rs.getString("crop_type"),rs.getInt("years_production"));
+                                         rs.getString("planting_date"),rs.getString("crop_type"),rs.getInt("years_production"));
             }
         } catch(SQLException ex){
             System.out.println("Error: "+ex.getMessage());

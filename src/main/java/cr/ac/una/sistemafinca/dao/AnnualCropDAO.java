@@ -27,7 +27,7 @@ public class AnnualCropDAO implements AnnualCropInterface {
     
     @Override
     public boolean insertAnnualCrop(AnnualCrop annual) {
-        String sqlCrop = "INSERT INTO CROPS (crop_code,crop_variety,plating_date,crop_type) VALUES (?,?,?,?)";
+        String sqlCrop = "INSERT INTO CROPS (crop_code,crop_variety,planting_date,crop_type) VALUES (?,?,?,?)";
         String sqlAnnual = "INSERT INTO ANNUALCROP (annual_code,annual_name,duration_days) VALUES (?,?,?)";
         try{
             PreparedStatement ps = connection.prepareStatement(sqlCrop);
@@ -98,7 +98,7 @@ public class AnnualCropDAO implements AnnualCropInterface {
             PreparedStatement ps = connection.prepareStatement(sqlAnnual);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){
-                AnnualCrop annual = new AnnualCrop(rs.getString("annual_code"),rs.getString("annual_name"),rs.getString("crop_variety"),rs.getString("plantation_date"),
+                AnnualCrop annual = new AnnualCrop(rs.getString("annual_code"),rs.getString("annual_name"),rs.getString("crop_variety"),rs.getString("planting_date"),
                                                    rs.getString("crop_type"),rs.getInt("duration_days"));
                 annuals.add(annual);
             }
@@ -118,7 +118,7 @@ public class AnnualCropDAO implements AnnualCropInterface {
             ps.setString(1, code);
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
-                return new AnnualCrop(rs.getString("annual_code"),rs.getString("annual_name"),rs.getString("crop_variety"),rs.getString("plantation_date"),
+                return new AnnualCrop(rs.getString("annual_code"),rs.getString("annual_name"),rs.getString("crop_variety"),rs.getString("planting_date"),
                                       rs.getString("crop_type"),rs.getInt("duration_days"));
             }
         }  catch(SQLException ex){

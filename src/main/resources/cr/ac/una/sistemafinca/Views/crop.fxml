@@ -5,19 +5,24 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="832.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.sistemafinca.controller.CropController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.sistemafinca.controller.CropController">
    <children>
-      <Label layoutX="339.0" layoutY="29.0" prefHeight="18.0" prefWidth="153.0" text="Agregar Cultivo" />
+      <Label layoutX="104.0" layoutY="61.0" prefHeight="18.0" prefWidth="153.0" text="Agregar Cultivo" />
       <Label layoutX="28.0" layoutY="97.0" text="Código de cultivo" />
-      <Label layoutX="24.0" layoutY="166.0" text="Variedad de cultivo" />
-      <Label layoutX="22.0" layoutY="226.0" text="Fecha de plantación" />
-      <Label layoutX="22.0" layoutY="281.0" text="Tipo de cultivo" />
-      <TextField fx:id="cropField" layoutX="152.0" layoutY="93.0" prefHeight="26.0" prefWidth="222.0" />
-      <TextField fx:id="varietyField" layoutX="152.0" layoutY="161.0" prefHeight="26.0" prefWidth="222.0" />
-      <TextField fx:id="plantationDateField" layoutX="152.0" layoutY="221.0" prefHeight="26.0" prefWidth="222.0" />
-      <TextField fx:id="cropTypeField" layoutX="152.0" layoutY="276.0" prefHeight="26.0" prefWidth="222.0" />
-      <Button fx:id="addCropButton" layoutX="452.0" layoutY="93.0" mnemonicParsing="false" onAction="#addCrop" text="Agregar cultivo" />
-      <Button fx:id="viewCropButton" layoutX="454.0" layoutY="140.0" mnemonicParsing="false" onAction="#swichtToViewCrop" text="Ver cultivos" />
+      <Label layoutX="28.0" layoutY="189.0" text="Variedad de cultivo" />
+      <Label layoutX="28.0" layoutY="238.0" text="Fecha de plantación" />
+      <Label layoutX="26.0" layoutY="281.0" text="Tipo de cultivo" />
+      <TextField fx:id="cropField" layoutX="181.0" layoutY="92.0" prefHeight="26.0" prefWidth="222.0" promptText="CA-001/CP-001" />
+      <TextField fx:id="varietyField" layoutX="181.0" layoutY="184.0" prefHeight="26.0" prefWidth="222.0" />
+      <TextField fx:id="plantationDateField" layoutX="181.0" layoutY="233.0" prefHeight="26.0" prefWidth="222.0" promptText="26 de Mayo de 2026" />
+      <TextField fx:id="cropTypeField" layoutX="181.0" layoutY="276.0" prefHeight="26.0" prefWidth="222.0" promptText="PERENNE / ANUAL" />
+      <Button fx:id="addCropButton" layoutX="460.0" layoutY="93.0" mnemonicParsing="false" onAction="#addCrop" text="Agregar cultivo" />
+      <Button fx:id="viewCropButton" layoutX="460.0" layoutY="149.0" mnemonicParsing="false" onAction="#swichtToViewCrop" text="Ver cultivos perennes" />
       <Button fx:id="backButton" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#switchtoMainMenu" text="Regresar" />
+      <Label layoutX="26.0" layoutY="144.0" text="Nombre de cultivo" />
+      <TextField fx:id="cropNameField" layoutX="181.0" layoutY="139.0" prefHeight="26.0" prefWidth="222.0" promptText="Maíz / Cacao" />
+      <TextField fx:id="durationField" layoutX="183.0" layoutY="320.0" prefHeight="26.0" prefWidth="222.0" />
+      <Label layoutX="31.0" layoutY="324.0" text="Duración en días o años" />
+      <Button fx:id="annualWindow" layoutX="460.0" layoutY="194.0" mnemonicParsing="false" onAction="#switchToAnnualView" text="Ver cultivos anuales" />
    </children>
 </AnchorPane>

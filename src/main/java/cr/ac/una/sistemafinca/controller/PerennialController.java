@@ -41,11 +41,7 @@ public class PerennialController {
     @FXML
     private TableColumn<?, ?> typeColumn;
     @FXML
-    private TableColumn<?, ?> daysColumn;
-    @FXML
     private TableColumn<?, ?> descriptionColumn;
-    @FXML
-    private Button addButton;
     @FXML
     private Button deleteButton;
     @FXML
@@ -56,10 +52,14 @@ public class PerennialController {
     private Button findButton;
     @FXML
     private Button backButton;
-
     @FXML
-    private void addAnnualCrop(ActionEvent event) {
-    }
+    private TableColumn<?, ?> yearsColumn;
+    @FXML
+    private TextField varietyField;
+    @FXML
+    private TextField dateField;
+    @FXML
+    private TextField typeField;
 
     @FXML
     private void deleteCrops(ActionEvent event) {
@@ -79,7 +79,7 @@ public class PerennialController {
 
     @FXML
     private void swichtToCropsWindow(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/sistemafinca/Views/cropView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/sistemafinca/Views/crop.fxml"));
         javafx.scene.Node source = (javafx.scene.Node) event.getSource();
         Stage currentWindow = (Stage) source.getScene().getWindow();
         currentWindow.setScene(new Scene(root));
