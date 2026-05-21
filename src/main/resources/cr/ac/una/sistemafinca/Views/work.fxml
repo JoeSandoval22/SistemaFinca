@@ -39,8 +39,8 @@
       </TableView>
       <Button fx:id="addButton" layoutX="421.0" layoutY="44.0" mnemonicParsing="false" onAction="#addWorks" text="Agregar labor" />
       <Button fx:id="updateWork" layoutX="421.0" layoutY="80.0" mnemonicParsing="false" onAction="#updateWorks" text="Actualizar labor" />
-      <Button fx:id="deleteButton" layoutX="906.0" layoutY="44.0" mnemonicParsing="false" onAction="#deleteWorks" text="Eliminar labor" />
-      <Button fx:id="findButton" layoutX="909.0" layoutY="79.0" mnemonicParsing="false" onAction="#findWorks" text="Buscar labor" />
+      <Button fx:id="deleteButton" layoutX="217.0" layoutY="600.0" mnemonicParsing="false" onAction="#deleteWorks" text="Eliminar labor" />
+      <Button fx:id="findButton" layoutX="903.0" layoutY="44.0" mnemonicParsing="false" onAction="#findWorks" text="Buscar labor" />
       <TextField fx:id="idField" layoutX="685.0" layoutY="44.0" prefHeight="26.0" prefWidth="186.0" promptText="CL-001" />
       <Label layoutX="578.0" layoutY="48.0" text="Código de labor" />
       <Label layoutX="511.0" layoutY="358.0" text="Lista de labores" />

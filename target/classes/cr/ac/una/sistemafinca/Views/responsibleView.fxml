@@ -24,7 +24,7 @@
       <Button fx:id="showButton" layoutX="854.0" layoutY="47.0" mnemonicParsing="false" onAction="#showResponsibles" text="Mostrar responsables" />
       <Button fx:id="findButton" layoutX="854.0" layoutY="91.0" mnemonicParsing="false" onAction="#findResponsiblesById" text="Buscar responsable" />
       <Button fx:id="deleteButton" layoutX="854.0" layoutY="143.0" mnemonicParsing="false" onAction="#deleteResponsibles" text="Eliminar responsable" />
-      <Label layoutX="32.0" layoutY="431.0" text="Nuevo ID" />
+      <Label layoutX="32.0" layoutY="431.0" text="ID" />
       <Label layoutX="32.0" layoutY="471.0" text="Nuevo nombre" />
       <Label layoutX="32.0" layoutY="515.0" text="Nuevo Correo" />
       <Label layoutX="32.0" layoutY="561.0" text="Nuevo número" />
