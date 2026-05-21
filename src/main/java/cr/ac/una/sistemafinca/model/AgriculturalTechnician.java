@@ -13,7 +13,7 @@ public enum AgriculturalTechnician {
     FERTILIZACION("FERTILIZACION"),
     RIEGO("RIEGO"),
     LIMPIEZA("LIMPIEZA"),
-    CONTROLPLAGAS("CONTROL_PLAGAS"),
+    CONTROL_PLAGAS("CONTROL_PLAGAS"),
     NOAPLICA("NO_APLICA");
     
     private String specialty;

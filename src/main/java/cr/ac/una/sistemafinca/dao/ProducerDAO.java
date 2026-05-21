@@ -41,7 +41,7 @@ public class ProducerDAO implements ProducerInterface{
 
     @Override
     public boolean updateProducer(Producer prod) {
-        String sql = "UPDATE PRODUCERS SET producer_name WHERE id_producer = ?";
+        String sql = "UPDATE PRODUCERS SET producer_name = ? WHERE id_producer = ?";
         try{
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, prod.getProducerLandName());

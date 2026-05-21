@@ -17,6 +17,10 @@ public class Producer {
         this.producerLandName=producerLandName;
     }
     
+    public Producer(){
+        
+    }
+    
     //Setters
     public void setProducerId(String id){
         this.producerId=id;
@@ -30,5 +34,9 @@ public class Producer {
     }
     public String getProducerLandName(){
         return this.producerLandName;
+    }
+    @Override
+    public String toString(){
+        return producerId;
     }
 }

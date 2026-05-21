@@ -4,6 +4,11 @@
  */
 package cr.ac.una.sistemafinca.controller;
 
+import cr.ac.una.sistemafinca.dao.ProducerDAO;
+import cr.ac.una.sistemafinca.dao.ResponsibleDAO;
+import cr.ac.una.sistemafinca.model.AgriculturalTechnician;
+import cr.ac.una.sistemafinca.model.Producer;
+import cr.ac.una.sistemafinca.model.Responsible;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,7 +27,7 @@ import javafx.stage.Stage;
 public class ResponsibleController {
 
     @FXML
-    private ComboBox<?> specialtyBox;
+    private ComboBox<AgriculturalTechnician> specialtyBox;
     @FXML
     private TextField idField;
     @FXML
@@ -47,13 +52,70 @@ public class ResponsibleController {
     private Button viewButton;
     @FXML
     private Button backButton;
+    @FXML
+    private Button prodButton;
+    
+    public void initialize(){
+        specialtyBox.getItems().setAll(AgriculturalTechnician.values());
+    }
+    
+    private void cleanFields(){
+        idField.clear();
+        nameResField.clear();
+        emailField.clear();
+        numberField.clear();
+        typeResField.clear();
+        asociationField.clear();
+        producerField.clear();
+        producerNameField.clear();
+    }
 
     @FXML
     private void addResponsible(ActionEvent event) {
+        String id = idField.getText().trim();
+        String name = nameResField.getText().trim();
+        String email = emailField.getText().trim();
+        String number = numberField.getText().trim();
+        String type = typeResField.getText().trim();
+        String asociation = asociationField.getText().trim();
+        AgriculturalTechnician tech = specialtyBox.getSelectionModel().getSelectedItem();
+        if(id.isEmpty() || name.isEmpty() || email.isEmpty() || number.isEmpty() || type.isEmpty() || asociation.isEmpty() || tech==null){
+            System.out.println("Error, no deje espacios en blanco ni opciones sin seleccionar.");
+            return;
+        }
+        try{
+            ProducerDAO proDao = new ProducerDAO();
+            Producer producer = proDao.findProducerByCode(asociation);
+            Responsible responsible = new Responsible(id,name,email,number,type,producer,tech);
+            ResponsibleDAO resDao = new ResponsibleDAO();
+            if(resDao.insertResponsible(responsible)){
+                System.out.println("Responsable agregado correctamente.");
+                cleanFields();
+            }
+            
+        }catch(Exception ex){
+            System.out.println("Error: "+ex.getMessage());
+        }      
     }
 
     @FXML
     private void addProducer(ActionEvent event) {
+        String producerCode = producerField.getText().trim();
+        String producerName = producerNameField.getText().trim();
+        if(producerCode.isEmpty() || producerName.isEmpty()){
+            System.out.println("Error, no deje espacios en blanco.");
+            return;
+        }
+        try{
+            Producer producer = new Producer(producerCode,producerName);
+            ProducerDAO proDao = new ProducerDAO();
+            if(proDao.insertProducer(producer)){
+                System.out.println("Productor agregado correctamente.");
+                cleanFields();
+            }
+        }catch(Exception ex){
+            System.out.println("Error: "+ex.getMessage());
+        }
     }
 
     @FXML
@@ -68,6 +130,15 @@ public class ResponsibleController {
     @FXML
     private void switchToMainMenu(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/sistemafinca/Views/agriculturalManager.fxml"));
+        javafx.scene.Node source = (javafx.scene.Node) event.getSource();
+        Stage currentWindow = (Stage) source.getScene().getWindow();
+        currentWindow.setScene(new Scene(root));
+        currentWindow.show();
+    }
+
+    @FXML
+    private void switchToProducersView(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/sistemafinca/Views/producerView.fxml"));
         javafx.scene.Node source = (javafx.scene.Node) event.getSource();
         Stage currentWindow = (Stage) source.getScene().getWindow();
         currentWindow.setScene(new Scene(root));

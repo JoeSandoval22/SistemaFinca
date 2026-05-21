@@ -45,7 +45,7 @@ public class PlotController {
     private Button viewButton;
     
     public void initialize(){
-         soilStateBox.getItems().setAll(SoilState.values());
+        soilStateBox.getItems().setAll(SoilState.values());
          
     }
 

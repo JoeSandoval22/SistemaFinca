@@ -11,6 +11,7 @@ cr\ac\una\sistemafinca\model\AgriculturalTechnician.class
 cr\ac\una\sistemafinca\dao\ResponsibleDAO.class
 cr\ac\una\sistemafinca\dao\PerennialCropDAO.class
 cr\ac\una\sistemafinca\dao\CropAux.class
+cr\ac\una\sistemafinca\controller\ProducerViewController.class
 cr\ac\una\sistemafinca\model\Responsible.class
 cr\ac\una\sistemafinca\model\AnnualCrop.class
 cr\ac\una\sistemafinca\controller\PlotViewController.class

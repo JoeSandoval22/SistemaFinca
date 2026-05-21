@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.sistemafinca.controller.ResponsibleController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.sistemafinca.controller.ResponsibleController">
    <children>
       <Label layoutX="26.0" layoutY="38.0" text="ID de responsable" />
       <Label layoutX="27.0" layoutY="79.0" text="Nombre de responsable" />
@@ -24,10 +24,12 @@
       <Button fx:id="responsibleButton" layoutX="216.0" layoutY="286.0" mnemonicParsing="false" onAction="#addResponsible" text="Agregar responsable" />
       <Label layoutX="481.0" layoutY="38.0" text="ID de productor" />
       <Label layoutX="481.0" layoutY="78.0" text="Nombre del productor" />
-      <TextField fx:id="producerField" layoutX="611.0" layoutY="35.0" prefHeight="26.0" prefWidth="207.0" promptText="FINC-001" />
-      <TextField fx:id="producerNameField" layoutX="611.0" layoutY="75.0" prefHeight="26.0" prefWidth="207.0" promptText="Asociación Finca bonita" />
+      <TextField fx:id="producerField" layoutX="632.0" layoutY="34.0" prefHeight="26.0" prefWidth="207.0" promptText="FINC-001" />
+      <TextField fx:id="producerNameField" layoutX="632.0" layoutY="74.0" prefHeight="26.0" prefWidth="207.0" promptText="Asociación Finca bonita" />
       <Button fx:id="producerbutton" layoutX="611.0" layoutY="130.0" mnemonicParsing="false" onAction="#addProducer" text="Agregar productor" />
-      <Button fx:id="viewButton" layoutX="376.0" layoutY="286.0" mnemonicParsing="false" onAction="#swichtToViewResponsibles" text="Ver responsables y productores" />
+      <Button fx:id="viewButton" layoutX="376.0" layoutY="286.0" mnemonicParsing="false" onAction="#swichtToViewResponsibles" text="Ver responsables " />
       <Button fx:id="backButton" layoutX="749.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Regresar" />
+      <Label layoutX="611.0" layoutY="178.0" text="Nota: Agregue primero al productor" />
+      <Button fx:id="prodButton" layoutX="611.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToProducersView" text="Ver productores" />
    </children>
 </AnchorPane>
