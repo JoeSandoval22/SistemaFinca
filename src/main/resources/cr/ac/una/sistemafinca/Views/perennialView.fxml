@@ -16,7 +16,7 @@
       <TextField fx:id="idField" layoutX="159.0" layoutY="81.0" prefHeight="26.0" prefWidth="196.0" promptText="CP-001" />
       <TextField fx:id="nameField" layoutX="159.0" layoutY="131.0" prefHeight="26.0" prefWidth="196.0" promptText="Cacao" />
       <TextField fx:id="daysField" layoutX="504.0" layoutY="175.0" prefHeight="26.0" prefWidth="196.0" promptText="5" />
-      <TableView fx:id="annualCropsList" layoutX="31.0" layoutY="288.0" prefHeight="298.0" prefWidth="837.0">
+      <TableView fx:id="perennialCropsList" layoutX="31.0" layoutY="288.0" prefHeight="298.0" prefWidth="837.0">
         <columns>
           <TableColumn fx:id="idColumn" prefWidth="100.80001831054688" text="Código" />
           <TableColumn fx:id="nameColumn" prefWidth="107.19998168945312" text="Nombre" />

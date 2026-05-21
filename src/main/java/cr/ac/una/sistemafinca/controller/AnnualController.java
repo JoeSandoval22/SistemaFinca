@@ -115,7 +115,7 @@ public class AnnualController {
         String date = dateField.getText().trim();
         String type = typeField.getText().trim();
         if(id.isEmpty() || name.isEmpty() || variety.isEmpty() ||date.isEmpty() || type.isEmpty() || days.isEmpty()){
-            System.out.println("Error, no deje espaios en blanco.");
+            System.out.println("Error, no deje espacios en blanco.");
             return;
         }
         try{

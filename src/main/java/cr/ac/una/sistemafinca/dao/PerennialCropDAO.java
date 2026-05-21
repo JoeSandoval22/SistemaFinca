@@ -92,7 +92,7 @@ public class PerennialCropDAO implements PerennialCropInterface {
     public List<PerennialCrop> getAllPerennialCrops() {
         List<PerennialCrop> perennials = new ArrayList<>();
         String sqlPerennial = "SELECT pc.perennial_code, pc.perennial_name, c.crop_variety, c.planting_date, c.crop_type, pc.years_production "+
-                              "FROM PERENNIALCROP pc JOIN CROPS c pc.perennial_code = c.crop_code";
+                              "FROM PERENNIALCROP pc JOIN CROPS c ON pc.perennial_code = c.crop_code";
         try{
             PreparedStatement ps = connection.prepareStatement(sqlPerennial);
             ResultSet rs = ps.executeQuery();
@@ -111,7 +111,7 @@ public class PerennialCropDAO implements PerennialCropInterface {
     @Override
     public PerennialCrop findPerennialCropByCode(String code) {
         String sqlPerennial = "SELECT pc.perennial_code, pc.perennial_name, c.crop_variety, c.planting_date, c.crop_type, pc.years_production "+
-                              "FROM PERENNIALCROP pc JOIN CROPS c pc.perennial_code = c.crop_code WHERE pc.perennial_code = ?";
+                              "FROM PERENNIALCROP pc JOIN CROPS c ON pc.perennial_code = c.crop_code WHERE pc.perennial_code = ?";
         try{
             PreparedStatement ps = connection.prepareStatement(sqlPerennial);
             ps.setString(1, code);
