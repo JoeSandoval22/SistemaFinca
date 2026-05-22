@@ -75,4 +75,8 @@ public class Responsible {
     public AgriculturalTechnician getTechnicalSpeciality(){
         return this.technicalSpeciality;
     }
+    @Override 
+    public String toString(){
+        return identification;
+    }
 }

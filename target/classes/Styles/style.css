@@ -96,3 +96,55 @@
 .table-row-cell:filled:selected .label {
     -fx-text-fill: #1b4332;
 }
+
+/* Estilo para los ComboBox (Basado en la estética del botón) */
+.combo-box {
+    -fx-background-color: #40916c;
+    -fx-background-radius: 5px;
+    -fx-padding: 2px;
+    -fx-cursor: hand;
+}
+
+.combo-box .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow {
+    -fx-background-color: white;
+}
+
+.combo-box:hover {
+    -fx-background-color: #2d6a4f;
+}
+
+.combo-box:showing {
+    -fx-background-color: #1b4332;
+}
+
+/* Lista desplegable interna del ComboBox */
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: #2d6a4f;
+    -fx-border-radius: 5px;
+}
+
+.combo-box-popup .list-cell {
+    -fx-text-fill: #2c3e2f;
+    -fx-padding: 6px 12px;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #e2f0e7;
+    -fx-text-fill: #1b4332;
+}
+
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #b7e4c7;
+    -fx-text-fill: #1b4332;
+}

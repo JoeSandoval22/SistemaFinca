@@ -61,4 +61,9 @@ public abstract class Crop {
     public String getCropType(){
         return this.cropType;
     }
+    
+    @Override
+    public String toString(){
+        return code;
+    }
 }

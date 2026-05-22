@@ -220,9 +220,11 @@ public class WorkController {
     @FXML
     private void switchToMainMenu(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/sistemafinca/Views/agriculturalManager.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/Styles/style.css").toExternalForm());
         javafx.scene.Node source = (javafx.scene.Node) event.getSource();
         Stage currentWindow = (Stage) source.getScene().getWindow();
-        currentWindow.setScene(new Scene(root));
+        currentWindow.setScene(scene);
         currentWindow.show();
     }
     

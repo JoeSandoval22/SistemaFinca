@@ -18,7 +18,7 @@ public class AnnualCrop extends Crop {
 
     @Override
     public String getDescription() {
-        return "Cultivo anual con ciclo aproximado de "+daysDuration+ "dias.";
+        return "Cultivo anual con ciclo aproximado de "+daysDuration+ " dias.";
     }
     //Setters
     public void setDaysDuration(int duration){

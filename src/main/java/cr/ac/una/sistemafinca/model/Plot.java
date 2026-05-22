@@ -69,4 +69,8 @@ public class Plot {
     public SoilState getSoilState(){
         return this.soilState;
     }
+    @Override
+    public String toString(){
+        return plotCode;
+    }
 }

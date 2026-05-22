@@ -121,27 +121,33 @@ public class ResponsibleController {
     @FXML
     private void swichtToViewResponsibles(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/sistemafinca/Views/responsibleView.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/Styles/style.css").toExternalForm());
         javafx.scene.Node source = (javafx.scene.Node) event.getSource();
         Stage currentWindow = (Stage) source.getScene().getWindow();
-        currentWindow.setScene(new Scene(root));
+        currentWindow.setScene(scene);
         currentWindow.show();
     }
 
     @FXML
     private void switchToMainMenu(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/sistemafinca/Views/agriculturalManager.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/Styles/style.css").toExternalForm());
         javafx.scene.Node source = (javafx.scene.Node) event.getSource();
         Stage currentWindow = (Stage) source.getScene().getWindow();
-        currentWindow.setScene(new Scene(root));
+        currentWindow.setScene(scene);
         currentWindow.show();
     }
 
     @FXML
     private void switchToProducersView(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/sistemafinca/Views/producerView.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/Styles/style.css").toExternalForm());
         javafx.scene.Node source = (javafx.scene.Node) event.getSource();
         Stage currentWindow = (Stage) source.getScene().getWindow();
-        currentWindow.setScene(new Scene(root));
+        currentWindow.setScene(scene);
         currentWindow.show();
     }
     

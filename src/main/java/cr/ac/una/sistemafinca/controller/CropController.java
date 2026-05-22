@@ -92,27 +92,33 @@ public class CropController {
     @FXML
     private void swichtToViewCrop(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/sistemafinca/Views/perennialView.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/Styles/style.css").toExternalForm());
         javafx.scene.Node source = (javafx.scene.Node) event.getSource();
         Stage currentWindow = (Stage) source.getScene().getWindow();
-        currentWindow.setScene(new Scene(root));
+        currentWindow.setScene(scene);
         currentWindow.show();
     }
 
     @FXML
     private void switchtoMainMenu(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/sistemafinca/Views/agriculturalManager.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/Styles/style.css").toExternalForm());
         javafx.scene.Node source = (javafx.scene.Node) event.getSource();
         Stage currentWindow = (Stage) source.getScene().getWindow();
-        currentWindow.setScene(new Scene(root));
+        currentWindow.setScene(scene);
         currentWindow.show();
     }
 
     @FXML
     private void switchToAnnualView(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/sistemafinca/Views/annualView.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/Styles/style.css").toExternalForm());
         javafx.scene.Node source = (javafx.scene.Node) event.getSource();
         Stage currentWindow = (Stage) source.getScene().getWindow();
-        currentWindow.setScene(new Scene(root));
+        currentWindow.setScene(scene);
         currentWindow.show();
     }  
 }

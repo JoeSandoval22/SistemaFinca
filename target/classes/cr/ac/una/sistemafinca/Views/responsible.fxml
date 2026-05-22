@@ -14,22 +14,22 @@
       <Label layoutX="28.0" layoutY="165.0" text="Número telefónico" />
       <Label layoutX="24.0" layoutY="203.0" text="Tipo de responsable" />
       <Label layoutX="26.0" layoutY="243.0" text="Asociación " />
-      <ComboBox fx:id="specialtyBox" layoutX="24.0" layoutY="286.0" prefWidth="150.0" promptText="Especialidad técnica" />
+      <ComboBox fx:id="specialtyBox" layoutX="24.0" layoutY="286.0" prefHeight="26.0" prefWidth="198.0" promptText="Especialidad técnica" />
       <TextField fx:id="idField" layoutX="216.0" layoutY="34.0" prefHeight="26.0" prefWidth="231.0" promptText="600000000" />
       <TextField fx:id="nameResField" layoutX="216.0" layoutY="74.0" prefHeight="26.0" prefWidth="231.0" promptText="Juan Abarca" />
       <TextField fx:id="emailField" layoutX="216.0" layoutY="121.0" prefHeight="26.0" prefWidth="231.0" promptText="juan@gmail.com" />
       <TextField fx:id="numberField" layoutX="216.0" layoutY="161.0" prefHeight="26.0" prefWidth="231.0" promptText="8070 9070" />
       <TextField fx:id="typeResField" layoutX="216.0" layoutY="199.0" prefHeight="26.0" prefWidth="231.0" promptText="Producto/Técnico agrícola" />
       <TextField fx:id="asociationField" layoutX="216.0" layoutY="238.0" prefHeight="26.0" prefWidth="231.0" promptText="Finca la bonita" />
-      <Button fx:id="responsibleButton" layoutX="216.0" layoutY="286.0" mnemonicParsing="false" onAction="#addResponsible" text="Agregar responsable" />
+      <Button fx:id="responsibleButton" layoutX="256.0" layoutY="286.0" mnemonicParsing="false" onAction="#addResponsible" text="Agregar responsable" />
       <Label layoutX="481.0" layoutY="38.0" text="ID de productor" />
       <Label layoutX="481.0" layoutY="78.0" text="Nombre del productor" />
       <TextField fx:id="producerField" layoutX="632.0" layoutY="34.0" prefHeight="26.0" prefWidth="207.0" promptText="FINC-001" />
       <TextField fx:id="producerNameField" layoutX="632.0" layoutY="74.0" prefHeight="26.0" prefWidth="207.0" promptText="Asociación Finca bonita" />
-      <Button fx:id="producerbutton" layoutX="611.0" layoutY="130.0" mnemonicParsing="false" onAction="#addProducer" text="Agregar productor" />
-      <Button fx:id="viewButton" layoutX="376.0" layoutY="286.0" mnemonicParsing="false" onAction="#swichtToViewResponsibles" text="Ver responsables " />
+      <Button fx:id="producerbutton" layoutX="633.0" layoutY="130.0" mnemonicParsing="false" onAction="#addProducer" text="Agregar productor" />
+      <Button fx:id="viewButton" layoutX="437.0" layoutY="286.0" mnemonicParsing="false" onAction="#swichtToViewResponsibles" text="Ver responsables " />
       <Button fx:id="backButton" layoutX="749.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Regresar" />
       <Label layoutX="611.0" layoutY="178.0" text="Nota: Agregue primero al productor" />
-      <Button fx:id="prodButton" layoutX="611.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToProducersView" text="Ver productores" />
+      <Button fx:id="prodButton" layoutX="589.0" layoutY="559.0" mnemonicParsing="false" onAction="#switchToProducersView" text="Ver productores" />
    </children>
 </AnchorPane>
